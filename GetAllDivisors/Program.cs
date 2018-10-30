@@ -23,7 +23,8 @@ namespace Divisors
                 if (num % i == 0)
                 {
                     divisors.Add(i);
-                    divisors.Add(num / i);
+                    if (num / i != i)
+                        divisors.Add(num / i);
                 }
             };
             divisors.Sort();
